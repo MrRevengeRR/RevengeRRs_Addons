@@ -5,7 +5,6 @@ using RevengeRRs_Addons.Cards;
 using HarmonyLib;
 using CardChoiceSpawnUniqueCardPatch.CustomCategories;
 
-
 namespace RevengeRRs_Addons {
     // These are the mods required for our mod to work
     [BepInDependency("com.willis.rounds.unbound", BepInDependency.DependencyFlags.HardDependency)]
@@ -25,13 +24,15 @@ namespace RevengeRRs_Addons {
         public static RevengeRRs_Addons instance { get; private set; }
 
         void Awake() {
+
             // Use this to call any harmony patch files your mod may have
             var harmony = new Harmony(ModId);
             harmony.PatchAll();
         }
         void Start() {
             instance = this;
-            CustomCard.BuildCard<MyCardName>();
+            CustomCard.BuildCard<Evasive>();
+            CustomCard.BuildCard<GlassNuke>();
         }
     }
 }
