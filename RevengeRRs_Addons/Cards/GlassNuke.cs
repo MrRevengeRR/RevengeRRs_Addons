@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RarityLib.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace RevengeRRs_Addons.Cards {
             return null;
         }
         protected override CardInfo.Rarity GetRarity() {
-            return CardInfo.Rarity.Uncommon;
+            return RarityUtils.GetRarity("Legendary");
         }
         protected override CardInfoStat[] GetStats() {
             return new CardInfoStat[]
