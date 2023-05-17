@@ -12,7 +12,7 @@ namespace RevengeRRs_Addons.Cards {
     class GlassNuke : CustomCard {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block) {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
-            gun.damage *= 2;
+            gun.damage *= 3;
             block.cdAdd = 0.25f;
             statModifiers.health /= 2;
         }
@@ -30,13 +30,13 @@ namespace RevengeRRs_Addons.Cards {
             return "Glass Nuke";
         }
         protected override string GetDescription() {
-            return "Doubles your damage, but splits the amount of hp you have.";
+            return null;
         }
         protected override GameObject GetCardArt() {
             return null;
         }
         protected override CardInfo.Rarity GetRarity() {
-            return RarityUtils.GetRarity("Legendary");
+            return RarityUtils.GetRarity("Troll");
         }
         protected override CardInfoStat[] GetStats() {
             return new CardInfoStat[]

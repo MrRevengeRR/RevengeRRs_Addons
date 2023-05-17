@@ -11,6 +11,7 @@ namespace RevengeRRs_Addons {
     [BepInDependency("com.willis.rounds.unbound", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.moddingutils", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.cardchoicespawnuniquecardpatch", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("root.rarity.lib", BepInDependency.DependencyFlags.HardDependency)]
     // Declares our mod to Bepin
     [BepInPlugin(ModId, ModName, Version)]
     // The game our mod is associated with
@@ -29,7 +30,8 @@ namespace RevengeRRs_Addons {
             var harmony = new Harmony(ModId);
             harmony.PatchAll();
 
-            //RarityUtils.AddRarity("Troll", 0.1f, new UnityEngine.Color(0.79f, 0.94f, 0.02f), new UnityEngine.Color(0.79f, 0.94f, 0.02f));
+            //RarityUtils.AddRarity("Troll", 0.1f, new UnityEngine.Color(0.93f, 0.94f, 0.92f), new UnityEngine.Color(0.79f, 0.94f, 0.02f));
+            RarityUtils.AddRarity("Troll", 0.1f, new UnityEngine.Color(0.22f, 0f, 0.78f), new UnityEngine.Color(0.79f, 0.94f, 0.02f));
         }
         void Start() {
             instance = this;
